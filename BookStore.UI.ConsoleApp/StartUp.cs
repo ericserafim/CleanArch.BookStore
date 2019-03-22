@@ -29,21 +29,11 @@ namespace BookStore.UI.ConsoleApp
             }
             #endregion
 
-            #region Book            
-            /*
+            #region Book                        
             AddRangeBooks();
             ListBooksAll();
             DeleteLastBook();
-            ListBooksAll();
-
-            _bookService.Update(new Book()
-            {
-                Id = 1,
-                Title = "Clean Arch",
-                NumPages = 65
-            });
-            ListBooksAll();
-            */
+            ListBooksAll();            
             #endregion
 
             Console.ReadKey();
@@ -54,19 +44,38 @@ namespace BookStore.UI.ConsoleApp
             _bookService.Add(new Book()
             {
                 Title = "Clean Architecture",
-                NumPages = 350
+                NumPages = 350,
+
+                Author = new Author()
+                {
+                    Name = "Teste",
+                    Origin = "BR"
+                }
             });
 
             _bookService.Add(new Book()
             {
                 Title = "The Lords Of The Rings",
-                NumPages = 1900
+                NumPages = 1900,
+
+                Author = new Author()
+                {
+                    Name = "Teste",
+                    Origin = "BR"
+                }
             });
 
             _bookService.Add(new Book()
             {
                 Title = "The Subtle Art of Not Giving a Fuck",
-                NumPages = 142
+                NumPages = 142,
+
+
+                Author = new Author()
+                {
+                    Name = "Teste",
+                    Origin = "BR"
+                }
             });
         }
 

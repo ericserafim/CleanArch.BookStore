@@ -19,10 +19,12 @@ namespace BookStore.Core.Services
 
         public void Add(Book book)
         {
+            /*
             if (book.Author == null || book.Author.Id <= 0)
                 throw new InvalidDataException("To create a Book you need a Author");
             if (_authorRepo.GetById(book.Author.Id) == null)
                 throw new InvalidDataException("Author not found");
+            */
 
             _bookRepo.Insert(book);
         }
